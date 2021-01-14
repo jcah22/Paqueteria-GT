@@ -14,14 +14,13 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="20dp"
-        android:layout_gravity="center"
         android:fadingEdge="horizontal|vertical"
-        app:cardElevation="1dp"
         app:cardCornerRadius="1dp"
-        >
+        app:cardElevation="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,49 +31,183 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#000"
-                android:text="LLene el Formulrio"
-                android:textStyle="bold"
-                android:gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="25dp"
                 android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center"
+                android:text="LLene el Formulrio"
+                android:textColor="#000"
                 android:textSize="20dp"
-                android:layout_marginRight="15dp" />
+                android:textStyle="bold" />
 
-                <com.skydoves.elasticviews.ElasticCheckButton
-                    android:id="@+id/botton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/coloBoton2"
-                    android:text="Generar Ubicacion"
-                    android:textColor="#ffff"
-                    android:textStyle="bold"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_centerHorizontal="true"
-                    app:checkButton_cornerRadius="4dp"
-                    app:checkButton_alpha="0.7"
-                    app:checkButton_duration="400"
-                    app:checkButton_scale="0.9"/>
+            <com.skydoves.elasticviews.ElasticCheckButton
+                android:id="@+id/botton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/coloBoton2"
+                android:text="Generar Ubicacion"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                app:checkButton_alpha="0.7"
+                app:checkButton_cornerRadius="4dp"
+                app:checkButton_duration="400"
+                app:checkButton_scale="0.9" />
+
+            <EditText
+                android:id="@+id/txtLat"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:visibility="invisible" />
 
 
+            <EditText
+                android:id="@+id/txtLong"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:visibility="invisible" />
 
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:text="Ingrese el Codigo del Pedido"
+                android:textAlignment="center"
+                android:textColor="@color/colorAzul"
+                android:textStyle="bold" />
 
 
+            <EditText
+                android:id="@+id/txtNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:textColor="#000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+               />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:text="Valor del Billete de Pago"
+                android:textAlignment="center"
+                android:textColor="@color/colorAzul"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/txtbillete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:textColor="#000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:text="Numero de Telefono"
+                android:textAlignment="center"
+                android:textColor="@color/colorAzul"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/txtTel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:textColor="#000"
+                android:inputType="number"
+                android:textStyle="bold"
+                android:maxLength="5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                />
+
+
+            <com.skydoves.elasticviews.ElasticCheckButton
+                android:id="@+id/btnEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/coloBoton1"
+                android:text="Enviar Datos"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                app:checkButton_alpha="0.7"
+                app:checkButton_cornerRadius="4dp"
+                app:checkButton_duration="400"
+                app:checkButton_scale="0.9" />
 
 
 
 
 
         </LinearLayout>
-
-
-
-
-
 
 
     </androidx.cardview.widget.CardView>
