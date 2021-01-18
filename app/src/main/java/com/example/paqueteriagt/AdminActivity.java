@@ -23,8 +23,8 @@ import dmax.dialog.SpotsDialog;
 
 public class AdminActivity extends AppCompatActivity {
 
-    ElasticCheckButton recuperar,btnenviar;
-    TextInputEditText gmail,password;
+    ElasticCheckButton recuperar, btnenviar;
+    TextInputEditText gmail, password;
     private FirebaseAuth mAuth;
 
     AlertDialog alerta;
@@ -38,7 +38,7 @@ public class AdminActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_titulo);
 
-
+        mAuth = FirebaseAuth.getInstance();
         recuperar = findViewById(R.id.recuperar);
         btnenviar = findViewById(R.id.btnEnviar);
 
@@ -50,10 +50,6 @@ public class AdminActivity extends AppCompatActivity {
 
         getRecuperar();
         loginAdmin();
-
-
-
-
 
 
     }
@@ -69,29 +65,33 @@ public class AdminActivity extends AppCompatActivity {
         btnenviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userE = gmail.getText().toString().trim();
+                final String userE = gmail.getText().toString().trim();
                 String passE = password.getText().toString().trim();
 
-                if(TextUtils.isEmpty(userE)){
+                if (TextUtils.isEmpty(userE)) {
                     StyleableToast.makeText(AdminActivity.this, "Ingrese un usuario!", Toast.LENGTH_LONG, R.style.ColoredBackground).show();
-                }else if(TextUtils.isEmpty(passE)){
+                } else if (TextUtils.isEmpty(passE)) {
                     StyleableToast.makeText(AdminActivity.this, "Ingrese una Contraseña", Toast.LENGTH_LONG, R.style.ColoredBackground).show();
-                }else{
+                } else {
                     alerta.show();
-                    mAuth.signInWithEmailAndPassword(userE,passE).addOnCompleteListener(AdminActivity.this, new OnCompleteListener<AuthResult>() {
+                    mAuth.signInWithEmailAndPassword(userE, passE).addOnCompleteListener(AdminActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful()){
+                            if (!task.isSuccessful()) {
                                 StyleableToast.makeText(AdminActivity.this, "Credenciales Incorrectas", Toast.LENGTH_LONG, R.style.ColoredBackground).show();
-                            }else{
+                                alerta.dismiss();
                                 limpiar();
-                                Intent i = new Intent(AdminActivity.this,MenuActivity.class);
+                            } else {
+
+                                Intent i = new Intent(AdminActivity.this, MenuAdminActivity.class);
                                 startActivity(i);
                                 alerta.dismiss();
+                                StyleableToast.makeText(AdminActivity.this, "Bienvenido: "+ userE, Toast.LENGTH_LONG, R.style.ColoredBackground).show();
                             }
 
                         }
                     });
+                    limpiar();
                 }
             }
         });
@@ -101,7 +101,7 @@ public class AdminActivity extends AppCompatActivity {
         recuperar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(AdminActivity.this ,RecuperarActivity.class);
+                Intent i = new Intent(AdminActivity.this, RecuperarActivity.class);
                 startActivity(i);
             }
         });
