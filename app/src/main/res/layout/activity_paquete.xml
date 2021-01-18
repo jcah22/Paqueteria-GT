@@ -73,7 +73,7 @@
 
 
             <EditText
-                android:id="@+id/txtLong"
+                android:id="@+id/txtPedido"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="10dp"
@@ -176,7 +176,7 @@
                 android:textColor="#000"
                 android:inputType="number"
                 android:textStyle="bold"
-                android:maxLength="5"
+                android:maxLength="10"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
 

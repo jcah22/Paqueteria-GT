@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842512996060",
+    "project_id": "paqueteriagt-3d336",
+    "storage_bucket": "paqueteriagt-3d336.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842512996060:android:ba3223bbddc1d276af4619",
+        "android_client_info": {
+          "package_name": "com.example.paqueteriagt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842512996060-1qm8db81r5dmkkdi27gbutlmu2de0acg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyActKt9LO5R99GBYtuL5B0FNOUJzsHm4VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842512996060-1qm8db81r5dmkkdi27gbutlmu2de0acg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
